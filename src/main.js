@@ -1,8 +1,13 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import vueCustomElement from "vue-custom-element";
+import App from "./App.vue";
 
-Vue.config.productionTip = false
+Vue.use(vueCustomElement);
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+Vue.config.productionTip = false;
+
+Vue.customElement("tiptap-react", App);
+
+// new Vue({
+//   render: h => h(App),
+// }).$mount('#app')

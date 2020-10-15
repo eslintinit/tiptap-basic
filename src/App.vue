@@ -187,7 +187,7 @@ export default {
         new Underline(),
         new History()
       ],
-      content: ``,
+      content: this.$root.value || "",
       onUpdate: ({ getHTML }) => {
         if (this.$root.setValue) {
           this.$root.setValue(getHTML());
